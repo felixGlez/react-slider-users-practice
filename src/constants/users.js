@@ -56,5 +56,3 @@ export const USERS = [
 		profileImage: 'https://randomuser.me/api/portraits/women/59.jpg'
 	}
 ];
-
-console.log(USERS.length);

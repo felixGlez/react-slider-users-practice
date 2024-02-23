@@ -1,10 +1,10 @@
 import { StyledButton } from './styles';
 
-const Button = ({ children, action, $userIndex }) => {
-	console.log($userIndex);
+const Button = ({ children, action, disabled }) => {
+	console.log(disabled);
 	return (
 		<>
-			<StyledButton disabled={$userIndex} onClick={action}>
+			<StyledButton disabled={disabled} onClick={action}>
 				{children}
 			</StyledButton>
 		</>
