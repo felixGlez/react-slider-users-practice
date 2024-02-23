@@ -12,10 +12,16 @@ const UserCard = () => {
 				<StyledName>Name: {USERS[currentUser].name}</StyledName>
 				<StyledInfo>Username: {USERS[currentUser].username}</StyledInfo>
 				<StyledInfo>Email: {USERS[currentUser].email}</StyledInfo>
-				<Button action={() => prevUser(currentUser, setCurrentUser)}>
+				<Button
+					$userIndex={currentUser === 0}
+					action={() => prevUser(currentUser, setCurrentUser)}
+				>
 					Previous
 				</Button>
-				<Button action={() => nextUser(currentUser, setCurrentUser)}>
+				<Button
+					$userIndex={currentUser === USERS.length - 1}
+					action={() => nextUser(currentUser, setCurrentUser)}
+				>
 					Next
 				</Button>
 			</StyledUserCard>
